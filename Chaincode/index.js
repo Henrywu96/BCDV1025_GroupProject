@@ -6,7 +6,7 @@
 
 'use strict';
 
-const seafood = require('./lib/seafood');
+const seafood = require('./lib/seafood.js');
 
-module.exports.seafood = seafood;
+module.exports.Seafood = seafood;
 module.exports.contracts = [seafood];
