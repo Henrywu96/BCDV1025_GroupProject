@@ -54,10 +54,10 @@ Group 4: Joseph 101058760, Min-Tzu 101453248, Harshdeep 101442299
         - The processors would then need to be able to specify when they can fulfill that order and the order number.
 
 ### Sequence Diagram
-![seaqunce diagram](../img/sequence_diagram.png)
+![Alt text](img/sequence_diagram.png)
 
 
 
 ### Snapshots of application
-![Alt text](../img/snapshot1.png)
-![Alt text](../img/snapshot2.png)
+![Alt text](img/snapshot1.png)
+![Alt text](img/snapshot2.png)
