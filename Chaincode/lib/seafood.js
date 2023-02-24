@@ -107,7 +107,7 @@ class Seafood extends Contract {
 
     // AddSeafood adds a new seafood to the seafood list.
     async AddSeafood(ctx, catchID, name, weight, harvestDate, shipID, latitude, longitude, temperature, humidity, ConfirmationOfSaleCode) {
-        const exists = await this.seafoodExists(ctx, catchID);
+        const exists = await this.SeafoodExists(ctx, catchID);
         if (exists) {
             throw new Error(`The seafood ${catchID} already exists`);
         }
@@ -139,11 +139,11 @@ class Seafood extends Contract {
     async GetSeafood(ctx, catchID) {
         const seafoodJSON = await ctx.stub.getState(catchID); // get the seafood info from chaincode state
         if (!seafoodJSON || seafoodJSON.length === 0) {
-            throw new Error(`The customer ${catchID} does not exist`);
-
-        } else if (JSON.parse(seafoodJSON.toString()).docType !== 'aquaticLife') {
-            throw new Error('Invalid seafood type record');
+            throw new Error(`The seafood ${catchID} does not exist`);
         }
+        // } else if (JSON.parse(seafoodJSON.toString()).docType !== 'aquaticLife') {
+        //     throw new Error('Invalid seafood type record');
+        // }
         return seafoodJSON.toString();
     }
 
