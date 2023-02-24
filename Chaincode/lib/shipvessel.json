@@ -1,0 +1,23 @@
+{
+    "G30A": {
+        "ID": "G30A",
+        "Name": "G Thirty A",
+        "City": "Kingston"
+    }, 
+    "K90B":{
+        "ID": "K90B",
+        "Name": "K Ninety B",
+        "City": "Vancouver"
+    },
+    "Z70E":{
+        "ID": "Z70E",
+        "Name": "Z Seventy E",
+        "City": "St. John's"
+
+    },
+    "W40F":{
+        "ID": "W40F",
+        "Name": "W Fourty F",
+        "City": "Halifax"
+    }
+}
