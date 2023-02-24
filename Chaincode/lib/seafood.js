@@ -95,14 +95,14 @@ class Seafood extends Contract {
             },
         ];
 
-        for (const seafood of seafoods) {
-            seafood.docType = 'aquaticLife';
+//         for (const seafood of seafoods) {
+//             seafood.docType = 'aquaticLife';
 
-            await ctx.stub.putState(
-                seafood.ID,
-                Buffer.from(stringify(sortKeysRecursive(seafood)))
-            );
-        }
+//             await ctx.stub.putState(
+//                 seafood.ID,
+//                 Buffer.from(stringify(sortKeysRecursive(seafood)))
+//             );
+//         }
     }
 
     // AddSeafood adds a new seafood to the seafood list.
@@ -139,11 +139,19 @@ class Seafood extends Contract {
     async GetSeafood(ctx, catchID) {
         const seafoodJSON = await ctx.stub.getState(catchID); // get the seafood info from chaincode state
         if (!seafoodJSON || seafoodJSON.length === 0) {
+<<<<<<< HEAD
             throw new Error(`The seafood ${catchID} does not exist`);
         }
         // } else if (JSON.parse(seafoodJSON.toString()).docType !== 'aquaticLife') {
         //     throw new Error('Invalid seafood type record');
         // }
+=======
+            throw new Error(`The customer ${catchID} does not exist`);
+        }
+//         } else if (JSON.parse(seafoodJSON.toString()).docType !== 'aquaticLife') {
+//             throw new Error('Invalid seafood type record');
+//         }
+>>>>>>> bc450270a0e8038a45995af4ff2336a8c0f48cb3
         return seafoodJSON.toString();
     }
 
